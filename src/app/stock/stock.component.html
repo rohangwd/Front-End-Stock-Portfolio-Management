@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Stock Portfolio Management</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/stock">Add Stock</a></li>
+      <li><a routerLink="/portfolio">Portfolio</a></li>
+      <li><a routerLink="/historicalstock">Historical Stock</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div style="text-align: center">
+    <h1>{{message}}</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-6">
+          <form>
+              <fieldset>
+                  <legend class="text-center">Valid information is required to Add Stock. <span class="req"><small>
+                              required *</small></span></legend>
+
+                  <div class="form-group">
+                      <label for="symbol"><span class="req">* </span> Symbol Name: </label>
+                      <input  type="text" [(ngModel)]="stock.symbol" name="symbol" id="symbol"
+                          class="form-control" maxlength="28" required placeholder="Enter your Symbol name..." />
+                  </div>
+
+                  <div class="form-group">
+                      <label for="quantity"><span class="req">* </span> Quantity: </label>
+                      <input class="form-control" type="text" [(ngModel)]="stock.quantity" name="quantity" id="quantity" required
+                          placeholder="Enter valid Quantity" />
+                          
+                  </div>
+                  <div class="space"></div>
+                  <div class="form-group;">
+                      <input class="btn btn-success" type="submit" name="addStock" id="addStock" value="Add Stock" (click)="saveStockDetail()">
+                  </div>
+              </fieldset>
+          </form>
+          
+      </div>
+
+  </div>
+</div>
+  
+</body>
+</html>
+
+
+
+

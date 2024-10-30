@@ -1,27 +1,66 @@
-# JpMorganAngularStock
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+ Prerequisite for Front-End Stock Portfolio Management Angular Application 
+ 
+ 
+  Information : Used Stock Sybol By Me :- symbol=AAPL ,  symbol=MSFT ,  symbol=GOOGL
+  
+  JSON Request For POST Man Client: - (http://localhost:8080/api/addStock)
+     {
+		"symbol":"AAPL",
+        "quantity": 3  
+     }
+	
+	{
+		"symbol":"MSFT",
+        "quantity": 4  
+    }
+	
+	{
+		"symbol":"GOOGL",
+        "quantity": 2
+    }
+ 
+ 
+ Step 1: clone the project from GitHub Link in the workspace folder
 
-## Development server
+ Step 2:  Import the project folder in Visual Studio (VS Code Tools) 
+ 
+ Step 3:  run the command in Visual Studio Terminal "npm install"
+ 
+ Step 4:  To execute the project run the "ng serve --open" command
+ 
+ Step 5:   localhost:4200/ link open on browser
+ 
+ Step 6:   Now you see the home page of the application
+ 
+ Step 7:   When you click on the portfolio you can see the stock of the portfolio that exists in the Database
+ 
+ Step 8:   when you click on Historical Stock you can see the history of the portfolio.
+ 
+ Step 9: When you click on Add Stock, you can add a stock to your portfolio with Current real-time data.
+           But we are using an external API, and there is a Free Limit per day. So, I have a hard-coded default value.
+		   
+		   For the need to check real-time stock value need to Create an Account Below with email ID Registration.  
+		   
+		   For External Stock prices create an account on 
+           Alpha Vantage(https://www.alphavantage.co/) Free API to get a Free key from there.
+           Replace with the below key "RE6R68JMS4APGODI" in the Application.property file of the Back End API Project.
+        
+           Application.property File
+           alphavantage.api.key=RE6R68JMS4APGODI
+		   
+		   
+Tool Version Information:-
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+1) Node (v20.18.0(LTS)) : https://nodejs.org/en/download/prebuilt-installer
+2) node --version
+3) npm -version (10.8.2)
+4) npm install -g @angular/cli  (install angular which binary of cli in ng)
+5) ng --version (18.2.10)
+6) ng new --no-standalone (after Angualr17 there is a standalone tag that means no app.module if we want this just run this command)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ng new AngularWorkSpaceOct24 --no-standalone
 
-## Build
+7) Visual Studio
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
